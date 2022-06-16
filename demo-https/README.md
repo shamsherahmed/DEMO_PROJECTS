@@ -9,6 +9,6 @@ server.ssl.key-store=classpath:keystore/shamsherahmed.p12
 ###### The password used to generate the certificate
 server.ssl.key-store-password=use the same password which we added during certificate creation
 ###### The alias mapped to the certificate
-server.ssl.key-alias=javadevjournal
+server.ssl.key-alias=shamsherahmed
 ###### Run Spring Boot on HTTPS only
 server.port=8443
