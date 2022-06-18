@@ -40,11 +40,6 @@ class DemoHttpsApplicationTests {
 		SSLConnectionSocketFactory scsf = new SSLConnectionSocketFactory(
 				SSLContexts.custom().loadTrustMaterial(null, new TrustSelfSignedStrategy()).build(),
 				NoopHostnameVerifier.INSTANCE);
-
-		/*SSLContext sslContext = new SSLContextBuilder()
-				.loadTrustMaterial(trustStore.getURL(), trustStorePassword.toCharArray())
-				.build();
-		SSLConnectionSocketFactory socketFactory = new SSLConnectionSocketFactory(sslContext);*/
 		CloseableHttpClient httpClient = HttpClients.custom()
 				.setSSLSocketFactory(scsf)
 				.build();
