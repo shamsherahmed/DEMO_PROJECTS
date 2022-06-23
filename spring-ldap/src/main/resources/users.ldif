@@ -1,0 +1,47 @@
+dn: dc=shamsherahmed,dc=com
+objectclass: top
+objectclass: domain
+objectclass: extensibleObject
+dc: shamsherahmed
+
+dn: ou=groups,dc=shamsherahmed,dc=com
+objectclass: top
+objectclass: organizationalUnit
+ou: groups
+
+dn: ou=people,dc=shamsherahmed,dc=com
+objectclass: top
+objectclass: organizationalUnit
+ou: people
+
+dn: uid=shamsher,ou=people,dc=shamsherahmed,dc=com
+objectclass: top
+objectclass: person
+objectclass: organizationalPerson
+objectclass: inetOrgPerson
+cn: Shamsher
+sn: Ahmed
+uid: shamsher
+userPassword: $2a$04$4H8dc38d63ytR/fJYWpp2OQXzZBCHoIGricHVLaK9xogJTZ/lsmF2
+
+dn: uid=kabir,ou=people,dc=shamsherahmed,dc=com
+objectclass: top
+objectclass: person
+objectclass: organizationalPerson
+objectclass: inetOrgPerson
+cn: Kabir
+sn: Singh
+uid: kabir
+userPassword: $2a$04$Jz4L3PuP2zekBVH5ZN8kvuIVnYqQw09DpcW9kuPHb35G6SJ84M72O
+
+dn: cn=admin,ou=groups,dc=shamsherahmed,dc=com
+objectclass: top
+objectclass: groupOfUniqueNames
+cn: admin
+uniqueMember: uid=shamsher,ou=people,dc=shamsherahmed,dc=com
+
+dn: cn=user,ou=groups,dc=shamsherahmed,dc=com
+objectclass: top
+objectclass: groupOfUniqueNames
+cn: user
+uniqueMember: uid=kabir,ou=people,dc=shamsherahmed,dc=com
